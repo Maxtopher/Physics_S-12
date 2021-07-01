@@ -81,80 +81,319 @@
     <div class="jumbotron feature">
         <div class="container">
             <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 3: Tools & Electronics</h1>
-            <p>Make a circuit using the breadboard and kit components. Then use the multimeter to measures voltages and calculate currents. Simulate the circuit, and then use the Microcontroller Analog to measure voltage of a potentiometer.</p>
+            <p>Make a circuit using the breadboard and kit components. Then use the multimeter to measures voltages and calculate currents. Simulate the circuit, and then use the Microcontroller Analog to measure voltage of a potentiometer or voltage divider.</p>
         </div>
     </div>
 
     <!-- Content -->
     <div class="container">     
 
-        <!-- Heading:  -->
+        <!-- Heading: First Circuit -->
        <div class="row" style="margin-bottom: 30px;">
             <div class="col-md-8">
-                <h1 class="page-header">Day 3</h1>
-                <h3>Day 3</h3>
-                <p>Day 3</h3>
+                <h1 class="page-header">Making My First Circuit</h1>
+                <h3>Basic LED Light Circuit</h3>
+                <p>I haven't had any experience creating circuits before this class. Therefore, starting with the basic LED light circuit was a perfect way to start. I stripped the wires trying to leave just enough exposed wire to be entired contained in the bread board. Next, I gathered the necessary components: the microcontroller, breadboard, LED, 100 Ohm resistor, wires and multimeter. Becasue this was my first circuit, I decided to first model the circuit using the online circuit simulator tool, Tinkercad. With a functional circuit modeled, I started to create my first physical circuit. Attaching the red wires to the 3.3V power source and the black wires to the ground, I simply had to complete the circuit with a resistor and the LED light (making sure to put the cathode towards ground). With this simple circuit, the resistor and LED were in series, so there were two possible cofigurations for the circuit. I tried them both below:</h3>
             </div>
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="###" alt="###">
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Heading: -->
-        <div class="row" style="margin-bottom: 30px;">
-            <div class="col-sm-4">
-                <h1 class="page-header">HEAD</h1>
-                <p>paragraph.</p>
-            </div>
-            <div class="col-sm-4">
-                
                 <!--Carosousel-->
-                <div id="myCarousel_#" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
+                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
-                        <li data-target="#myCarousel_" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel_" data-slide-to="1"></li>
-                        <li data-target="#myCarousel_" data-slide-to="2"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
                     </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner">
                         <div class="item active">
-                            <img src="###.jpg" alt="###">
+                            <img src="Wires.jpg" alt="###">
                         </div>
 
                         <div class="item">
-                            <img src="###.jpg" alt="###">
+                            <img src="LED/LED_Supplies.jpg" alt="###">
                         </div>
 
                         <div class="item">
-                            <img src="###.jpg" alt="###">
+                            <img src="LED/LED_Light_Sim.jpg" alt="###">
                         </div>
                     </div>
 
                     <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel_" data-slide="prev">
+                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
                         <span class="glyphicon glyphicon-chevron-left"></span>
                         <span class="sr-only">Previous</span>
                     </a>
-                    <a class="right carousel-control" href="#myCarousel_" data-slide="next">
+                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: LED Voltages 1 -->
+        <div class="row" style="margin-bottom: 30px;">    
+            <div class="col-sm-3">
+                <h3>Configuration 1</h3>
+                <p>The first configuration I created and measured was the LED follwed by the resistor. Using the multimeter, I calculated the voltage drop over each component of the circuit. The LED had a voltage drop of 2.81 Volts and the resistor had a voltage drop of 0.49 Volts. Calculating the current of this circuit over the resistor, we have I=4.9x10<sup>-3</sup> A.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="LED/LED_Light_B.jpg" alt="First Configuration of LED Light Circuit">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="LED/LED_Light_Graph_A.jpg" alt="Graph of Voltages at Different Points">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: LED Voltages 2 -->
+        <div class="row" style="margin-bottom: 30px;">    
+            <div class="col-sm-3">
+                <h3>Configuration 2</h3>
+                <p>For the second configuration, the resistor is followed by the LED. Despite the changing of orientation, each component is defined by the same voltage drop as in the original configuration. This means that the current in both circuits are equivalent. This makes sense as the total impedance to current would be equivalent in both circuits.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="LED/LED_Light_A.jpg" alt="First Configuration of LED Light Circuit">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="LED/LED_Light_Graph_B.jpg" alt="Graph of Voltages at Different Points">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Potentiometer -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h1 class="page-header">The Potentiometer</h1>
+                <h3>Potentiometer and the Multimeter</h3>
+                <p>The first circuit I created using the potentiometer, I utilized an open yellow wire from the cenrtal pin of the potentiometer. The multimeter was used to complete this circuit and measure the variable voltage with respect to the ground initiated by the potentiometer. At zero resistance, we read the full voltage potential of 3.3V, while at the maximum resistance, we read that the voltage drop to the ground is 0V. Therefore, the potentiometer could be "tuned" to allow any level of voltage (from 0-3.3V) through the central pin.</h3>
+            </div>
+            <div class="col-sm-4">
+                <!--Carosousel-->
+                <div id="myCarousel_2" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_2" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_2" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_2" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Potentiometer/Potentiometer_C.jpg" alt="Potentiometer at no resistance">
+                        </div>
+
+                        <div class="item">
+                            <img src="Potentiometer/Potentiometer_B.jpg" alt="Potentiometer at half resistance">
+                        </div>
+
+                        <div class="item">
+                            <img src="Potentiometer/Potentiometer_A.jpg" alt="Potentiometer at full resistance">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_2" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_2" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Potentiometer 2 -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <h3>Analog Read Serial</h3>
+                <p>After learning how to upload code from my computer to the microcontroller using the basic "Blink" code, I wanted to adapt my circuit to measure the voltage across the cenrtal pin of the potentiometer on my computer. To do this, I simply moved the open yellow wire into the A0 input port on the microcontroller and ran the "AnalogReadSeries" code. Now, in the serial monitor view, I could see the real time voltage across the central pin as the dial of the potentiometer was turned. This was represented as a number ranging from 0 to 1023. Essentially, the voltage was equivalent to the starting voltage times the output over 1023. Thus, if the serial monitor read a 512, this was equivalent to 50% of the total voltage, or 1.65V. Using Tinkercad, I was able to simulate both versions of this circuit (measured using the multimeter and the analog measurement code). I also attempted to slightly change the basic "AnalogReadSeries" code by getting it to convert the initial output automatically into the voltage. I had limited success with this, and was only able to get the program to round to an integer of the voltage.</h3>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Potentiometer/Potentiometer.jpg" alt="Analog Reading Potentiometer">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Potentiometer/Potentiometer_Sim.jpg" alt="Sim of Analog Reading Potentiometer">
+            </div>
+            <div class="col-sm-4">
+                <!--Carosousel-->
+                <div id="myCarousel_3" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_3" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_3" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_3" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Potentiometer/Potentiometer_Full.jpg" alt="Potentiometer at no resistance">
+                        </div>
+
+                        <div class="item">
+                            <img src="Potentiometer/Potentiometer_Mid.jpg" alt="Potentiometer at half resistance">
+                        </div>
+
+                        <div class="item">
+                            <img src="Potentiometer/Potentiometer_Low.jpg" alt="Potentiometer at full resistance">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_3" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_3" data-slide="next">
                         <span class="glyphicon glyphicon-chevron-right"></span>
                         <span class="sr-only">Next</span>
                     </a>
                 </div>
                 <!--/Carosousel-->
 
-                <p><a class="btn btn-default"  style="margin-top: 50px;" href="###">Download the Stepper Motor Model!</a></p>
-
-            </div>
-            <div class="col-sm-4">
-                <img class="img-responsive img-rounded" style="margin-top: 50px;" src="###.jpg" alt="###">
-                <img class="img-responsive img-rounded" style="margin-top: 35px;" src="Stepper/Final_Stepper.jpg" alt="The Charger Model">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Potentiometer/Print_Voltage.jpg" alt="Code for Analog Potentiometer">
             </div>
         </div>
-        <!-- /.row -->  
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-12">
+                <h1 class="page-header">Voltage Divider</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                
+                <h3>Two Equal Resistors</h3>
+                <p>For my first attempt at creating a voltage divider, I used two equivalent resistors (100 Ohms). Becasue these resistors were equivalent, the circuit should have equally dissipated the voltage across each resistor (1.65V each). This was predicted by the formula for resistors in series and the simulation of the circuit. Ultimately, this prediction was verified using the multimeter. However, I wanted to use the "AnalogReadSeries" code in place of the multimeter as we did previously with the potentiometer. Using the end of the yellow wire not in the A0 input, I was able to use this exposed wire similarly to a multimeter. Where it touched, the serial monitor read the voltage with respect to ground.</h3>
+                <img class="img-responsive img-rounded" style="margin-top: 50px;" src="Voltage_Divider/Voltage_Divider_Sim_A.jpg" alt="Voltage Divider with two equal resistors sim">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 50px;" src="Voltage_Divider/Voltage_Divider_A.jpg" alt="Voltage Divider with two equal resistors">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_Analog.jpg" alt="Analog Measured Voltage Divider with two equal resistors">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 50px;" src="Voltage_Divider/Voltage_Divider_Graph_A.jpg" alt="Graph of same resistor voltage divider">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_Digital.jpg" alt="Measurements for Analog Measured Voltage Divider with two equal resistors">
+            </div>
+        </div>
+        <!-- /.row --> 
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <h3>Two Different Resistors</h3>
+                <p>In the next circuit, I experimented with two different resistors. The first resistor was 100 Ohms while the second was 470 Ohms. For two resistors in parallel, the voltage across the first is equivalent to the total voltage times the first resistor over the sum of both resistors. Both the calculations and simulation predicted a voltage drop of 0.58 Volts across the 100 Ohm resistor and a voltage drop of 2.72 Volts across the 470 Ohm resistor. This was quickly verified experimentally using the newly created circuit and the multimeter to physically measure these voltages.</h3>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_Sim_B.jpg" alt="Voltage Divider with two equal resistors sim">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_B.jpg" alt="Voltage Divider with two equal resistors">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_Graph_B.jpg" alt="Graph of same resistor voltage divider">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Voltage_Divider/Voltage_Divider_C.jpg" alt="Measurements for Analog Measured Voltage Divider with two equal resistors">
+            </div>
+        </div>
+        <!-- /.row --> 
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-12">
+                <h1 class="page-header">Thermistor</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <h3>Using Voltage Divider with Thermistor</h3>
+                <p>To experiment with the thermistor, I first had to find it's range of resistance. At room temperature, the thermistor had a resistance of 10KOhms, but when heated, the resistance decreased to around 6KOhms. Therefore, I used a 10KOhm resistor to create my voltage divider. I first tested my circuit using two resistors of 10KOhms. To verfiy that it split the voltage evenly, I again attempted to convert the analog sensor reading from the unitless designation of 0 to 1023 into an actual voltage. This time I inserted a formula of "sensorValue*3.3/1023". This printed the correct voltage without having to manually convert the numbers. With this working properly, i created my circuit for the thermistor. Inserting the voltage reader between the thermistor and the resistor, I was able to measure how the voltage across the thermistor changed with different temperatures. At room themperature, the thermistor held steadily around 1.77V, but when heated with my fingers, it increased to about 1.95V. This makes sense, becasue with less resistance within the thermistor at higher temperatures, it should allow more voltage to pass through unimpeded. Ultimately, an increase in temperature results in an increase in voltage across the thermistor which can be measured using the analog input function of the microcontroller.</h3>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Thermistor/Thermistor_Circuit.jpg" alt="Hot resistance of thermistor">
+                <!--Carosousel-->
+                <div id="myCarousel_4" style="margin-top: 20px;" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_4" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_4" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Thermistor/Thermistor_Resistance.jpg" alt="Room Temp Resistance of Thermistor">
+                        </div>
+
+                        <div class="item">
+                            <img src="Thermistor/Thermistor_RoomTemp.jpg" alt="Hot resistance of thermistor">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_4" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_4" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Thermistor/Thermistor_Voltage.jpg" alt="Hot resistance of thermistor">
+                <!--Carosousel-->
+                <div id="myCarousel_5" style="margin-top: 20px;" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_5" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_5" data-slide-to="1"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Thermistor/Thermistor_Resistance_Hot.jpg" alt="Hot resistance of thermistor">
+                        </div>
+
+                        <div class="item">
+                            <img src="Thermistor/Thermistor_Hot.jpg" alt="Hot resistance of thermistor">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_5" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_5" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
     
+    </div>
+    <!-- /.container -->
+
     <footer>
         <div class="footer-blurb">
             <div class="container">
@@ -164,7 +403,8 @@
                         <p>Short hook and description of my final project!</p>
                         <p><a class="btn btn-default" href="../Final_Project/index.html">Final Project</a></p>
                     </div>
-                </div>  
+                </div>
+                <!-- /.row -->  
             </div>
         </div>
         
