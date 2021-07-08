@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Max's Physics S-12</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <span class="glyphicon glyphicon-screenshot"></span> 
+                    Maxtopher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../About_Me/index.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Final_Project/index.html">Final Project</a>
+                    </li>
+                    <li class="active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="../01_Intro/index.html">Assignment 1: Introduction & Documentation</a></li>
+                            <li><a href="../02_2D_Design/index.html">Assignment 2: 2D Design & Cutting</a></li>
+                            <li><a href="../03_Tools/index.html">Assignment 3: Electronics & Tools</a></li>
+                            <li><a href="../04_Prototyping/index.html">Assignment 4: Rapid Prototyping</a></li>
+                            <li><a href="index.html">Assignment 5: Programmable Electronics</a></li>
+                            <li><a href="../06_3D_Design/index.html">Assignment 6: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic_Input/index.html">Assignment 7: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic_Output/index.html">Assignment 8: Electronic Output Devices</a></li>
+                            <li><a href="../09_Networking/index.html">Assignment 9: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">Assignment 10: Machine building</a></li>
+                            <li><a href="../11_Computer/index.html">Assignment 11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">Assignment 12: Wildcard / Project Prep</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="jumbotron feature">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 5: Programmable Electronics</h1>
+            <p>Program a microcontroller to produce an output using at leat one button for an input. Include a conditional statement and a for loop.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">     
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h1 class="page-header">Circuitry Practice</h1>
+                <p>Circuitry and coding are still very new to me. To begin this assignment, I wanted to practice a variety of simple coding strategies and circuit designs. This practice began with the simple process of learning about simple pullup, pulldown, and input_pullup circuit designs. With a pulldown resistor in the circuit, a pressed button will report as <code>HIGH</code>. With a pullup resistor, a pressed button would report as <code>LOW</code>. The same is true of the internal (input) pullup resistor in the microcontroller. Shown are these the types. </p>
+            </div>
+            <div class="col-sm-4">
+            <!--Carosousel-->
+                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Pulldown.jpg" alt="pulldown resistor">
+                        </div>
+
+                        <div class="item">
+                            <img src="Pullup.jpg" alt="pullup resistor">
+                        </div>
+
+                        <div class="item">
+                            <img src="input_pullup.jpg" alt="input_pullup resistor">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h1 class="page-header">Simple Buttons and LED</h1>
+                <h3>Turning an LED On and Counting Presses</h3>
+                <p>Continuing my circuitry practice, I tried to transition to controlling an LED on my breadboard rather than the builtin LED on the microcontroller. This was a fairly simple switch, so I experimented with multiple configurations. I also tried to put multiple buttons in parallel to make the light only turn on when each button was pressed at the same time. </p>
+                <p>To continue the challenge, I created a code that would also count the number of times the light was turned on. The code for the counter and Button controlled LED can be found here: <a href="Arduino_Code/Button_Counter.ino">LED/Button Counter</a>. </p>
+            </div>
+            <div class="col-sm-3">
+                        <div class="item active">
+                            <img class="img-responsive img-rounded" src="One_Button.jpg" alt="one buton controlling led">
+                            <figcaption>One Button controlling an LED</figcaption>
+                        </div>
+
+                        <div>
+                            <img class="img-responsive img-rounded" style="margin-top: 40px;" src="Two_Button_On.jpg" alt="four buttons controlling led">
+                            <figcaption>Four Buttons controlling an LED. All must be pressed to turn on.</figcaption>
+                        </div>
+            </div>
+            <div class="col-sm-3">
+                        <div class="item">
+                            <img class="img-responsive img-rounded" src="Two_Button_Off.jpg" alt="four buttons controlling led">
+                            <figcaption>Two Buttons controlling an LED. All must be pressed to turn on.</figcaption>
+                        </div>
+
+                        <div class="item">
+                            <img class="img-responsive img-rounded" style="margin-top: 20px;" src="Four_Button.jpg" alt="two buttons controlling led in on">
+                            <figcaption>Two Buttons controlling an LED. Both must be pressed to turn on.</figcaption>
+                        </div>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>2 Buttons, 1 LED</h3>
+                <p>Putting multiple buttons in parallel to control on LED was a simple way to require multiple buttons to be pressed in order to turn on an LED. However, wiring two buttons to have two separate inputs made the coding a little more challenging. Here, it was key to use a conditional and the && logical operator. This code requires both buttons to be pressed in order to turn the LED on.
+                    <pre><code>if (button1State == LOW && button2State == LOW){
+    analogWrite(LED, 150);
+  } else {
+    analogWrite(LED, 0);
+  }</code></pre>
+                The complete code can be found here: <a href="Arduino_Code/2Button_1LED.ino">2 Buttons, 1 LED Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" src="2Button_LED.gif" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>Buttons and LEDs on One Circuit</h3>
+                <p>Next I tried to add multiple compoents to the same circuit and code. Becasue I now knew how to create button/LED code, I tried to create a circuit with two buttons that individually controlled two separate LEDs. This circuitry and code was very similar to the previous example, except there was no counter and each button had it's own conditional statement defined. The following was the <code>loop()</code> code for this  design:
+                <pre><code>void loop() {
+  buttonState1 = digitalRead(button1);
+  buttonState2 = digitalRead(button2);
+  
+  if (buttonState1 == LOW) { 
+    digitalWrite(ledPin1, HIGH);
+  } else {
+    digitalWrite(ledPin1, LOW);
+  }
+
+  if (buttonState2 == LOW) {
+    digitalWrite(ledPin2, HIGH);
+  } else {
+    digitalWrite(ledPin2, LOW);
+  }</code></pre>
+                This allows each LED to be controlled individually by a different button.
+                The complete code can be found here: <a href="Arduino_Code/2BUtton_2LED.ino">MultiLED Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" src="MultiLED.gif" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+         <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>Blinking Potentiometer</h3>
+                <p>A potentiometer can be used to alter the speed at which an LED blinks on and off. The key to this code is defining a variable for the potentiometer "Sensor Value". Simply by using the code <code>delay(sensorValue)</code>, after programming the LED to turn on, and again after programming it to turn off, the rate at which the LED blinks is directly controlled by the input from the reading from the potentiometer.
+                The complete code can be found here: <a href="Arduino_Code/Blink_Potentiometer.ino">Blinking Potentiometer Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" src="Potentiometer_Blinker.gif" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>2 LED <code>for()</code> Loop</h3>
+                <p>Wiring two LEDs separately with <code>input_pullup</code>, we can use a nested <code>for()</code> loop in order to have each LED blink at different rates. The nested <code>for()</code> loop in this code requires the light to blink on and off each second for a minute before the outside <code>for()</code> loop and be completed and the second light turns on. Therfore, this code has one LED blinking at one second intervals while the other LED blinks at one minute intervals.
+                The complete code can be found here: <a href="Arduino_Code/2LED_forloop.ino">LED <code>for()</code> Loop Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" src="2LED_Cycles.jpg" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>LED Button Dimmer</h3>
+                <p>My last practice circuit and code was creating a button that would light up an LED, and then the LED would dim until it was off in about 2 seconds. To accomplish this, another nested <code>for()</code> loop inside a conditional worked best. This specifies for the integer I to quickly dim from 255 to 0, at intervals of 1 very quickly. Therfore, when the button is pressed, the LED is illuminated and then quickly dims until off.
+                    <pre><code>void loop() {
+  if (digitalRead(buttonPin) == LOW) {
+    for(int i = 255; i >= 0; i--) {
+    analogWrite(ledPin, i);
+    delay(10);
+    }
+  }</code></pre>
+                The complete code can be found here: <a href="Arduino_Code/Button_Dimmer.ino">Button Dimmer Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" style="margin-top: 30px" src="Button_Dimmer.gif" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->  
+
+    <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>Final Circuit</h3>
+                <p>My final circuit and code combined the functionality of the potentiometer and the previous LED button dimmer example. I added a second LED to be dimmed and used the potentiometer to control how fast the LEDs were dimmed. To do so, I had to map the input from the potentiometer to a more resonable timeframe for the dimming. Therefore, I used the map command to write <code>sensorValue = map(analogRead(sensorPin), 0, 1023, 1, 15)</code>. From here, I used the <code>sensorValue</code> to be the variable within the delay command.
+                The complete code can be found here: <a href="Arduino_Code/05_Code.ino">Dimmer/Potentiometer Code</a>.</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" style="margin-top: 30px" src="05_Circuit.gif" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->  
+    
+    </div>
+    <!-- /.container -->
+    
+    <footer>
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 footer-blurb-item">
+                        <h3><span class="glyphicon glyphicon-fire"></span> Final Project</h3>
+                        <p>Short hook and description of my final project!</p>
+                        <p><a class="btn btn-default" href="../Final_Project/index.html">Final Project</a></p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="small-print">
+            <div class="container">
+                <p><a href="../Contact/index.html">Contact</a></p>
+                <p>Copyright &copy; 2021 Maxwell Christopher </p>
+            </div>
+        </div>
+    </footer>
+
+	
+    <!-- jQuery -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="../js/holder.min.js"></script>
+	
+</body>
+
+</html>
