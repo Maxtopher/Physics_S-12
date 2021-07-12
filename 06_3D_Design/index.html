@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Max's Physics S-12</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <span class="glyphicon glyphicon-screenshot"></span> 
+                    Maxtopher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../About_Me/index.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Final_Project/index.html">Final Project</a>
+                    </li>
+                    <li class="active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="../01_Intro/index.html">Assignment 1: Introduction & Documentation</a></li>
+                            <li><a href="../02_2D_Design/index.html">Assignment 2: 2D Design & Cutting</a></li>
+                            <li><a href="../03_Tools/index.html">Assignment 3: Electronics & Tools</a></li>
+                            <li><a href="../04_Prototyping/index.html">Assignment 4: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programmable_Electronics/index.html">Assignment 5: Programmable Electronics</a></li>
+                            <li><a href="/index.html">Assignment 6: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic_Input/index.html">Assignment 7: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic_Output/index.html">Assignment 8: Electronic Output Devices</a></li>
+                            <li><a href="../09_Networking/index.html">Assignment 9: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">Assignment 10: Machine building</a></li>
+                            <li><a href="../11_Computer/index.html">Assignment 11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">Assignment 12: Wildcard / Project Prep</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="jumbotron feature">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 6: 3D Design & Printing</h1>
+            <p>Use a photogrammetry app to create a 3D scan of something and design/prepare to print something on the 3D printer.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">     
+
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h1 class="page-header">3D Photogrammetry Scanning</h1>
+                <h3>Qlone</h3>
+                <p>I used the app <a href=https://www.qlone.pro/>Qlone</a> to complete my 3D scans. With this app, you needed to print out a checkerboard-like image, called the <i>QLONE Mat</i> and place your object on top of the board. This helps the program recognize where the object is in space as you rotate around it. As you rotate around the object on the mat, an AR dome shows up on your screen. You must scan the object from every direction in a hemisphere around it and small pieces of the dome will dissappear as you complete that area of the scan.</p>
+                <p>The results varied from some very high quality scans to some very poor representations. Overall, the app did a great job of 3D scanning objects that weren't shiny and had fairly regular patterns. The app also gave an option to merge multiple scans of the same object (taken at different angles) to get a more accurate scan, although for me, this process always failed to merge correctly and only enhanced the scan of the moonsnail shell.</p>
+            </div>
+            <div class="col-sm-4">
+                <!--Carosousel-->
+                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Qlone_Mat.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Full_Dome.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Part_Dome.jpg" alt="###">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scans-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Owl_Scan.gif" alt="#">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Moonsnail_Scan.gif" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h1 class="page-header">3D Printing</h1>
+                <h3>Fusion 360 Design</h3>
+                <p>For my 3D printed design, I wanted to create a semi-mobile shark model. To make it move, I wanted to create multiple interlocking pieces. Each piece would have a vertical cylindrical hole through it. The next piece in the chain would connect to it through a cylindrical insert. Normally, these would be able to slide though each other in the vertical direction, but because this design will be 3D printed, we can use additive methods to permantly fix each piece in its place. This will give it some freedom to flex, while retaining its general form. The Fusion 360 model is available to download below.</p>
+                <a class="btn btn-default" href="Shark_Downloads/3D_Shark.f3d">Download Fusion 360 Shark Model (.f3d)</a>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Final_Shark.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scan Steps 1-4-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Connection_Sketch.jpg" alt="#">
+                <figcaption>Step 1: First I measured the dimensions of the shark I would be creating using an online model. Then, I created a sketch of the basic interlocking pieces to be extruded to the right height.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Sketch_Top.jpg" alt="#">
+                <figcaption>Step 2: Imported images of a great white shark in different profiles and used sketch tools to transpose the shark image onto the corresponding planes of the rectangular prism.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Shark_Sketches.jpg" alt="#">
+                <figcaption>Step 3: The 3 necessary profiles of the shark required to get a rough outline of the model. Each setch had to be alligned with the others in order to ensure they were alligned upon extrusion.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <!--Carosousel-->
+                <div id="myCarousel_2" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_2" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_2" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_2" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Fusion_Shark/Shark_Extrude1.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Fusion_Shark/Shark_Extrude2.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Fusion_Shark/Shark_Extrude3.jpg" alt="###">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_2" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_2" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+                <figcaption>Step 4: The 3 extrusions that created the general shark outline using the intercept features. From here, I made small adjustments to round certain boxy features and fill in unnecessary gaps.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Shark_Notch2.jpg" alt="#">
+                <figcaption>Step 5: Next I used the cut version of extrude to remove a small volume of each piece on the top and bottom.</figcaption>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Cylinder.jpg" alt="#">
+                <figcaption>Step 6: The resulting shape of these pieces allow them to be completely contained by the next piece in the chain.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Mid_Piece.jpg" alt="#">
+                <figcaption>Step 7: Completing the top and bottom of each piece using new sketches and combining bodies locks each piece ahead of it into place.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Joints.jpg" alt="#">
+                <figcaption>Step 8: Adding joints was intented to help the shark demonstrate its potential capabilities of movement, although I could not quite figure out how to limit the range of motion of each joint.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <iframe src="https://college233.autodesk360.com/shares/public/SH56a43QTfd62c1cd968a53d2ca6ffa969f9?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Fusion_Shark/Shark_Animated.gif" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Print Format-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h3>Print Formating</h3>
+                <p>With the Fusion 360, 3D model complete, it was time to save the shark as a file ready to be 3D printed. To do so, I had to transfer it to the Prusa Slicer Software and get it ready to be sliced. This included adding support material and other specifications. After the shark was ready to be printed, it was clear it would require a large amount of support material. This was expected, but as I have never used a 3D printer before, I feel this may still be a feasible design (it just may take a while to remove all the support material). The STL mesh file and 3D printable gcode of the 3D shark are available for download below.</p>
+                <a class="btn btn-default" href="Shark_Downloads/Shark.stl">Download STL File</a>
+                <a class="btn btn-default" href="Shark_Downloads/3D_Shark_Quality.gcode">Download Sliced Gcode</a>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Slicing/3D_Shark_Prusa.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Slicing/Mesh_Shark.jpg" alt="#">
+                <figcaption>Step 9: First I had to save my model as an STL file. Using high refinement for my model, the file contained 40,266 triangles.</figcaption>
+            </div>
+            <div class="col-md-3">
+                <img class="img-responsive img-rounded" src="Slicing/Prusa_Shark.jpg" alt="#">
+                <figcaption>Step 10: Next, I could open and postition my 3D shark model in the Prusa Slicer Software.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Slicing/Prusa_Shark_Draft_Mat.jpg" alt="#">
+                <figcaption>Step 11: Experimenting first with draft quality Generic PLA filament, I added the necessary support material. This resulted in a print time of 1 hour and 34 minutes. It was also 46% support material.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Slicing/Prusa_Shark_Quality_Output.jpg" alt="#">
+                <figcaption>Step 12: For my final print specs, I used 0.20mm Generic PLA filament. This resulted in a print time of 1 hour and 55 minutes. Surprisingly, the supprot material only totaled 30% in this 3D print job.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  3D Scan-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Slicing/Shark_Sliced_Draft.gif" alt="#">
+                <figcaption>Draft Quality 3D Shark (0.30mm Draft Filament)</figcaption>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Slicing/Shark_Slicer.gif" alt="#">
+                <figcaption>Final Quality 3D Shark (0.20mm Quality Filament)</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+    
+    <footer>
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 footer-blurb-item">
+                        <h3><span class="glyphicon glyphicon-fire"></span> Final Project</h3>
+                        <p>Short hook and description of my final project!</p>
+                        <p><a class="btn btn-default" href="../Final_Project/index.html">Final Project</a></p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="small-print">
+            <div class="container">
+                <p><a href="../Contact/index.html">Contact</a></p>
+                <p>Copyright &copy; 2021 Maxwell Christopher </p>
+            </div>
+        </div>
+    </footer>
+
+	
+    <!-- jQuery -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="../js/holder.min.js"></script>
+	
+</body>
+
+</html>
