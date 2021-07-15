@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Max's Physics S-12</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <span class="glyphicon glyphicon-screenshot"></span> 
+                    Maxtopher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../About_Me/index.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Final_Project/index.html">Final Project</a>
+                    </li>
+                    <li class="active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="../01_Intro/index.html">Assignment 1: Introduction & Documentation</a></li>
+                            <li><a href="../02_2D_Design/index.html">Assignment 2: 2D Design & Cutting</a></li>
+                            <li><a href="../03_Tools/index.html">Assignment 3: Electronics & Tools</a></li>
+                            <li><a href="../04_Prototyping/index.html">Assignment 4: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programmable_Electronics/index.html">Assignment 5: Programmable Electronics</a></li>
+                            <li><a href="../06_3D_Design/index.html">Assignment 6: 3D Design & Printing</a></li>
+                            <li><a href="index.html">Assignment 7: Electronic Input Devices</a></li>
+                            <li><a href="../08_Electronic_Output/index.html">Assignment 8: Electronic Output Devices</a></li>
+                            <li><a href="../09_Networking/index.html">Assignment 9: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">Assignment 10: Machine building</a></li>
+                            <li><a href="../11_Computer/index.html">Assignment 11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">Assignment 12: Wildcard / Project Prep</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="jumbotron feature">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 7: Electronic Input Devices</h1>
+            <p>Use and create your own sensor. Calibrate the sensor, with its min, max and whether you can control this range.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">     
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-7">
+                <h1 class="page-header">The Hall Sensor</h1>
+                <p>I had alrady played around with the phototransitor during class time, so I tried to experiment with the Hall sensor for my homework. I wired up the fairly simple circuit and used an extremely basic analogRead function to see the sensor values. With the magnets oriented in one direction, the sensor read values from 10 to about 520. Oriented in the other direction, the sensor read values from 520 to 1014. Therefore, the sensor read about 520 when experiencing no magnetic field. The only way I could find to constrain the range was to limit the distance from the Hall Sensor the magnet was allowed to be. Therefore, the only way to control this range would be to physically limit the freedom of the magnet and its corresponding magnetic field.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Hall_Senor.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Magnet-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Stack.jpg" alt="#">
+                <figcaption>I cut out many carboard squares from a cereal box to create a space that could be measured.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Measure.jpg" alt="#">
+                <figcaption>Each piece was almost exactly 0.5mm.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Hall1.jpg" alt="#">
+                <figcaption>I set up the circuit with the Hall Sensor and added a small space in the carboard for it to sit.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Hall2.jpg" alt="#">
+                <figcaption>I measured the sensitivity of the Hall sensor with the magnets oriented in both directions at differnet intervals.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        !-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-8">
+                <h1 class="page-header">Creating a Sensor with Capacitance</h1>
+                <h3>Capacitor Sensor</h3>
+                <p>To create my own sensor, I cut out and attached tinfoil pieces to the end of a wire. I used the following circuit configuration and <a href=Capacitance_Touch_Sensor.ino>code</a> to measure the output value of my capacitor. The sensing function actually measures the time it takes the plates to charge in arbitrary units, however, this corresponds directly to capacitance. The closer the two plates are to each other, the greater the capacitance and time to charge. The circuit I created also contains two LEDs. The red light is illuminated when there is capacitance readings under 1000, and begins to dim once it reaches 1000. From here, the blue light increaes in brightness with greater capacitance readings. The minimum reading I could get without getting seemingly random low numbers was about 100, while the greatest value I recorded was 92340, with just a piece of tape between the larger tin foil piece and the grounded sensor. Therefore, I found the the minimum value is fairly constant, however, the upper bound can be altered by varying the size of the capacitor area. With smaller capacitor pieces, there is a dramatically smaller upper bound on the range of capacitance measured.</p>
+            </div>
+            <div class="col-sm-4">
+                <!--Carosousel-->
+                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
+                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="Red.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Red_Blue.jpg" alt="###">
+                        </div>
+
+                        <div class="item">
+                            <img src="Blue.jpg" alt="###">
+                        </div>
+                    </div>
+
+                    <!-- Left and right controls -->
+                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+                <!--/Carosousel-->
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Capacticance-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-3">
+                <img class="img-responsive img-rounded" src="Squares.jpg" alt="#">
+                <figcaption>First, I cut and wired 2 square pieces of tin foil. One 2x2cm and the other 3x3cm.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Stack.jpg" alt="#">
+                <figcaption>Next I cut out many carboard squares from a cereal box to create a space that could be measured.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Measure.jpg" alt="#">
+                <figcaption>Each piece was almost exactly 0.5mm.</figcaption>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Stack2.jpg" alt="#">
+                <figcaption>I recorded the output reading on the sensor at variable distances, using a copper plate set to ground, and recorded each interval.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Capacitance-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="2x2Cap.jpg" alt="#">
+                <figcaption>With the 2x2cm square, I plotted the corresponding graph. This shows that as the distance between the capacitor decreases, there is clear exponential growth. However, this seems strange, as the forumla for capacitance is C=EA/d, where d is distance. Therefore, this should be a linear relation. Therefore, I assume that the time of charging is not directly proportional to the actual capacitance, but has an exponential like relationship. This would explain how even though capacitance is increasing linearly, the senor outputs are increasing exponentially.</figcaption>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="3x3Cap.jpg" alt="#">
+                <figcaption>With the 3x3cm square, I plotted the corresponding graph. This simillarly shows that as the distance between the capacitor decreases, there is clear exponential growth. As expected, with a larger area, this produced larger values at every distance, however, the unexplained exponential nature of the curve remains. As previously stated, I think the best explanation for this my be a logarithmic relationship between the time of charging and capacitance.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+    
+    </div>
+    <!-- /.container -->
+    
+    <footer>
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 footer-blurb-item">
+                        <h3><span class="glyphicon glyphicon-fire"></span> Final Project</h3>
+                        <p>Short hook and description of my final project!</p>
+                        <p><a class="btn btn-default" href="../Final_Project/index.html">Final Project</a></p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="small-print">
+            <div class="container">
+                <p><a href="../Contact/index.html">Contact</a></p>
+                <p>Copyright &copy; 2021 Maxwell Christopher </p>
+            </div>
+        </div>
+    </footer>
+
+	
+    <!-- jQuery -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="../js/holder.min.js"></script>
+	
+</body>
+
+</html>
