@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<!-- Template by Quackit.com -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Max's Physics S-12</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS: You can use this stylesheet to override any Bootstrap styles and/or apply your own styles -->
+    <link href="../css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Logo and responsive toggle -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">
+                    <span class="glyphicon glyphicon-screenshot"></span> 
+                    Maxtopher
+                </a>
+            </div>
+            <!-- Navbar links -->
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../About_Me/index.html">About Me</a>
+                    </li>
+                    <li>
+                        <a href="../Final_Project/index.html">Final Project</a>
+                    </li>
+                    <li class="active dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="about-us">
+                            <li><a href="../01_Intro/index.html">Assignment 1: Introduction & Documentation</a></li>
+                            <li><a href="../02_2D_Design/index.html">Assignment 2: 2D Design & Cutting</a></li>
+                            <li><a href="../03_Tools/index.html">Assignment 3: Electronics & Tools</a></li>
+                            <li><a href="../04_Prototyping/index.html">Assignment 4: Rapid Prototyping</a></li>
+                            <li><a href="../05_Programmable_Electronics/index.html">Assignment 5: Programmable Electronics</a></li>
+                            <li><a href="../06_3D_Design/index.html">Assignment 6: 3D Design & Printing</a></li>
+                            <li><a href="../07_Electronic_Input/index.html">Assignment 7: Electronic Input Devices</a></li>
+                            <li><a href="index.html">Assignment 8: Electronic Output Devices</a></li>
+                            <li><a href="../09_Networking/index.html">Assignment 9: Networking / IoT</a></li>
+                            <li><a href="../10_Machine/index.html">Assignment 10: Machine building</a></li>
+                            <li><a href="../11_Computer/index.html">Assignment 11: Computer Programming</a></li>
+                            <li><a href="../12_Wildcard/index.html">Assignment 12: Wildcard / Project Prep</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <div class="jumbotron feature">
+        <div class="container">
+            <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 8: Electronic Output Devices</h1>
+            <p>Use a new output device with a microcontroller integrating at least one input device and avoiding the delay function.</p>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <div class="container">     
+
+        <!-- Heading:  Multitasking metro-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-7">
+                <h1 class="page-header">Multitasking the Metro</h1>
+                <p>To practice multitasking on the metroboard, I watched Nathan's recorded lab session from Friday and followed along in the creation of a complex circuit. It contained 3 LEDs wired to separate digital pins and two servo motors each wired to their own digital pins. The goal was to create a program code that could produce 5 simultaneous outputs to each individual component. The key here was to avoid the <code>delay()</code> function, and instead use loops the program can run through very quickly. However, most of the times the code runs through the loop, it will be nullified by an if-statement. By using <code>Millis()</code> for timing, we can control individual components separately and at the same time. I also experimented with class creation in order to make my work more efficient. I really struggled with this part later on, often forgeting to define certain variables in the right place or just not perfectly understanding the setup of the class. However, after playing around with the code, I was eventually able to reproduce the desired result and understand how the code produced it.</p>
+                <p>The end output for my experimentation phase was three separate LEDs that blinked at differing intervals (and the intervals could be adjusted very quickly in the code with the help of classes) and two servo motors rotating at different speeds.</p>
+                <p>Download the code for this deisgn here: <a href=Class_Flasher_Sweeper_Button/Class_Flasher_Sweeper_Button.ino>Code</a></p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Motor_LED.jpg" alt="#">
+                <img class="img-responsive img-rounded" src="5Things.gif" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Piano-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-7">
+                <h1 class="page-header">The LED Button Piano</h1>
+                <h3>Circuit Design</h3>
+                <p>For my independent project this week, I decided to integrate the buzzer, buttons and LEDs to create a 5 note breadboard piano. My plan was to have five buttons that could be pressed to each produce a different note on the buzzer. to add a little more complexity, I also wanted a different LED for each button that would also light up when it's note was played. This way, it would be more visually apparent as to which button was being pressed to produce what note.</p>
+                <p>The circuit I created to meet this idea looks complicated. While there are many wires, it is actually a very simple design. The buzzer is connected to ground and digitalpin 0. Then each button and LED is connected to a separate digitalpin. Every LED is also in series with a 100 Ohm resistor. To save some wiring, the LEDs and buttons share connection to ground.</p>
+                <p>The follwing Tinkercad design shows the wiring much more clearly.</p> 
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="LED_Buzzer.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Tinkercad-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Tinkercad_Piano.jpg" alt="#">
+
+            </div>
+            <div class="col-sm-3">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Piano-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6">
+                <h3>Coding - Classes</h3>
+                <p>The most challenging part of this assignment was creating the code to make my design work as I intended. I began by just trying to control the lights individually with their corresponding buttons. I did this first with a basic button-LED code, but it felt long and repetitive. Therefore, I tried to use my first self-created class. Once I completed the code and it finally worked, it seemed so simple, however getting there was far from easy. It took lots of trial and error, copy/pasting and experimenting. Finally, I was able to create a class that required only the input of the button pin and LED pin to create functionally paired components. Thankfully, once I got to my functional code, I felt like I had a great understanding of classes and would be able to make another one if necessary.</p>
+                <p><i>Here is the code for just the </i><a href=5LED_5Buzzer/5LED_5Buzzer.ino> Button/LED Class.</a></p> 
+                <p>That was a good thing, since I now had to make another class function for the buzzer. For this code, I needed each button to produce an individual tone from the buzzer only when pressed. That means the tone had to also turn off when the button was unpressed. To do this I intended to make an almost duplicate class while inputing the buzzer tone example in the <code>update()</code> portion. However, I quickly ran into two problems: Without using a strick duration time, I could not turn off the buzzer when it was unpressed. Also, I couldn't figure out how to correctly include the myTone function from class within the class I had created. To solve the second problem, I had to do a little experiementation with variable definitions and eventually was able to integrate the myTone function directly into my class. To solve the problem with the 'duration' I realized if I left the duration on, the tone would end that duration after the button was unpressed. Therefore, if I made the duration very small, it effectively ended with the button being unpressed. The only problem with this was that when two buttons were pressed at once, the buzzer played each tone separately, quickly oscillating back and forth between them (this can be heard at time in the youtube videos below). However, I later discovered that making the delay extremely small (i.e 5 milliseconds) you could optimally hear each note without have the lower note completely overwhelm the other notes entirely. This is the effect if you make the duration 1 millisecond. The class function also allows for very quick changes to the notes played by each button. I set them up to play octaves, randomly varied notes and a short scale.</p>
+                <p>Here is the complete code for the <a href=Buzzer_Class/Buzzer_Class.ino>Button Buzzer</a>.</p>
+                <p>The final step was integrating both codes togther. However, because I had already created the two classes, this was very simple and easy. The final code is given on the right and can be downloaded here: <a href=5LED_Button_Buzzer/5LED_Button_Buzzer.ino>5 Note Breadboard Piano Code</a>.</p>
+            
+                <img class="img-responsive img-rounded" src="LEDS.gif" alt="#">
+            </div>
+            <div class="col-sm-6">
+                
+                <pre><code><pre><code>class ButtonLED
+{
+    // Class Member Variables
+    // These are initialized at startup
+    int ledPin;      // the number of the LED pin
+    int buttonPin;   // number of button pin
+
+    // These maintain the current state
+    int ledState;                   // ledState used to set the LED
+    int buttonState;                 // state of button
+
+    // Constructor -
+  public:
+    ButtonLED(int Bpin, int Lpin)
+    {
+      buttonPin = Bpin;
+      pinMode(buttonPin, INPUT_PULLUP);
+
+      ledPin = Lpin;
+      pinMode(ledPin, OUTPUT);
+    }
+
+    void Update()
+    {
+      buttonState = digitalRead(buttonPin);
+
+      if (buttonState == LOW) { 
+        digitalWrite(ledPin, HIGH);
+      } else {
+        digitalWrite(ledPin, LOW);
+      }
+    }
+};
+
+ButtonLED led1(2, 4);
+ButtonLED led2(1, 5);
+ButtonLED led3(3, 6);
+ButtonLED led4(12, 7);
+ButtonLED led5(13, 8);
+
+void setup()
+{
+}
+
+void loop()
+{
+  led1.Update();
+  led2.Update();
+  led3.Update();
+  led4.Update();
+  led5.Update();
+}</code></pre></code></pre>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Youtubes-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/VEquYR01qts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/0l2A9QebRis" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        
+    </div>
+    <!-- /.container -->
+    
+    <footer>
+        <div class="footer-blurb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 footer-blurb-item">
+                        <h3><span class="glyphicon glyphicon-fire"></span> Final Project</h3>
+                        <p>You point the telescope into the sky, virtually focus it and broadcast it's image online! No longer do we have to look directly through the telescope to view the wonders of the night sky and we can share all our discoveries in real time with people all around the world. Click below to find out how it was made!</p>
+                        <p><a class="btn btn-default" href="../Final_Project/index.html">Final Project</a></p>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        
+        <div class="small-print">
+            <div class="container">
+                <p><a href="../Contact/index.html">Contact</a></p>
+                <p>Copyright &copy; 2021 Maxwell Christopher </p>
+            </div>
+        </div>
+    </footer>
+
+	
+    <!-- jQuery -->
+    <script src="../js/jquery-1.11.3.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../js/bootstrap.min.js"></script>
+	
+	<!-- IE10 viewport bug workaround -->
+	<script src="../js/ie10-viewport-bug-workaround.js"></script>
+	
+	<!-- Placeholder Images -->
+	<script src="../js/holder.min.js"></script>
+	
+</body>
+
+</html>

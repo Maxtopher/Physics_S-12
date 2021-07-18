@@ -128,12 +128,19 @@
 
         <!-- Heading: Concept -->
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-md-12">
                 <p>The basic, updated concept for my telescope design will be a wirelessly controlled focusing device for the telescope that allows you to actively see through the telescope lens as it is focused. To achieve this final product, I will need a stationary mount that attaches directly to the telescope. This will hold the necessary circuitry components and supply the support for the motors required to turn the focusing knobs. To actually attach the motors to the focusing knobs, I will likely have to 3D print a clamp-like, or tight fitting piece. Becasue there are knobs on each side of the lens, an extra motor could also be wired and attached to provide additional power and torque.</p>
                 <p>Additionally, I will mount a detachable camera to the viewfinder at the end of the lens. The ESP32-CAM should work well for this function, and can be accessed over wifi. This would not only allow for complete remote control of the focusing mechanism, but it would also achieve my goal of allowing multiple people at different locations to be able to see exactly what I am through the telescope in real time.</p>
             </div>
-            <div class="col-sm-4">
+        </div>
+        <!-- /.row -->
+        <!-- Heading: Concept -->
+        <div class="row">
+            <div class="col-sm-6">
                 <img class="img-responsive img-rounded" src="Concept/Design_Concept.jpg" alt="###">
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded center" src="Concept/Scematic.jpg" alt="###">
             </div>
         </div>
         <!-- /.row -->
@@ -152,10 +159,9 @@
                 <h3>Motor Control</h3>
                 <p>For optimal control of the motor's rotation, the stepper motor will be used to turn the focusing knob. However, the motor didn't appear to have the necessary torque to actually turn the knobs. If affixed on the same axis as the focusing knob, the motor could just barely turn the knob, and only very inefficiently. To overcome this problem, I experimented with a few different concepts. Becasue the focusing knob is grooved, it is almost like a gear. Therefore, using a small grooved lego piece, I was able to make a gear ratio that was able to easily turn the focusing knob (although extremely slowly). For the true design, I can create ideally linking gears, designing one to fit perfectly aound the focusing knob and the other to slot onto the stepper motor.</p>
             </div>
-            
         </div>
         <!-- /.row -->
-        
+
         <!-- Heading: Design -->
         <div class="row">
             <div class="col-sm-4">
@@ -170,20 +176,56 @@
         </div>
         <!-- /.row -->
 
-        <!-- Heading -->
+        <!-- Heading: Design -->
         <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">Weekly Work
-                    <small>Organized by</small> </h1>
-                <p>Listed here are the work conducted each week by... .</p>
+            <div class="col-sm-8">
+                <h3>Fusion 360 Modeling</h3>
+                <h4>The Gears:</h4>
+                <p>As described above, gears will be the ideal way to adjust the focusing knob using the stepper motor. Therefore, in Fusion 360, I used the spurgear addon to easily create a few generic gears. For the ideal gear ratio, the stepper motor gears are much smaller than the focusing knob counterparts. I also added the D-shaped axle holes for the stepper motor and added thin planes across the face of the focusing knob gears (so they have a large surface area to be glued onto the knobs) which were measured to fit perfectly around the knobs.</p>
+                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Gears.f3d>Gears.f3d</a></p>
+                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <img class="img-responsive img-rounded center" style="max-width: 300px;" src="Fusion/Gears.jpg" alt="###">
+            </div>
+            <div class="col-sm-4">
+                <iframe src="https://college233.autodesk360.com/shares/public/SH56a43QTfd62c1cd9685f09a83eaea504a9?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Content Row -->
-        <div class="row" style="margin-bottom: 30px;">
-            <div class="col-md-12">
-                New Row
+        <div class="row">
+            <div class="col-sm-8">
+                <h4>The Clamp:</h4>
+                <p>To create the clamp I decided to design two half cylinders that could be tightened with bolts to fit tightly around the telescope body. To do so I measured the diameter of the telescope and created a sketch with a circle just barely larger (in order to accont for slight error in the size of the telescope tube). To ensure it was guarunteed to fit tightly and securly, I removed a small portion of at the top and bottom where the bolts would attach. With slight give in the plastic material, this would surely pull the thin cylinder to fit nicely. Now, I just need to add a flat face to secure the stepper motor. I will drill holes on this flat area after it is printed to ensure the stepper motor is placed in the ideal place to allign the gears. Here I also added a flat "roof-like" feature for the metro board to have a place to easily attach to.</p>
+                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Clamp.f3d>Clamp.f3d</a></p>
+                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <div class="col-sm-6">
+                    <img class="img-responsive img-rounded" src="Fusion/Sketch.jpg" alt="###">
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive img-rounded" src="Fusion/Holes.jpg" alt="###">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <iframe src="https://college233.autodesk360.com/shares/public/SH56a43QTfd62c1cd968c88fd06186b2d1e1?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <div class="row">
+            <div class="col-sm-8">
+                <h4>The ESP32-CAM Holder:</h4>
+                <p>Finally, I needed to create the device that would hold the ESP32-CAM in place over the viewfinder lens. This had to be some sort of detachable feature that would hold the camera lens directly over the viewfinder lens. This design has a slot shaped perfectly for the ESP32-CAM to fit in back with just the camera lens able to fit through. This is centered within a circular piece that will fit over the viewfinder lens. It has notches to fit around the geometry already present on the telescope lens. To attach, bolts can be threaded through the holes in the side of the circular piece and tightened onto the viewfinder lens. THese should also allow for microadjustments to ideally position the ESP32-CAM over the viewfinder.</p>
+                <p>Download the Fusion 360 gear model here: <a href=Fusion/ESP32_CAM_Holder.f3d>ESP32-CAM Holder.f3d</a></p>
+                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <div class="col-sm-6">
+                    <img class="img-responsive img-rounded" src="Fusion/Sketch_ESP32.jpg" alt="###">
+                </div>
+                <div class="col-sm-6">
+                    <img class="img-responsive img-rounded" src="Fusion/ESP32_CAM2.jpg" alt="###">
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <iframe src="https://college233.autodesk360.com/shares/public/SH56a43QTfd62c1cd9686c1b725a0dea32d5?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             </div>
         </div>
         <!-- /.row -->
