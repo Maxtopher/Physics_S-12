@@ -231,12 +231,23 @@
         <!-- /.row -->
 
         <div class="row">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
                 <h4>The ESP32-CAM</h4>
-                <p>Now it was time to experiment with the ESP32-CAM to make sure it would work well with my telescope.</p>
+                <p>Now it was time to experiment with the ESP32-CAM to make sure it would work well with my telescope. I followed the steps to upload the correct code on the <a href=https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/> AI Thinker ESP32-CAM</a>. I had to wire it to the USB attached FTDI programmer and when uploading code, I had to connect the GPIO 0 pin to the ground pin as well. Then, removing the GPIO-0 to ground connection and opening the 115200 baud serial monitor, hitting the reset button on the ESP32-CAM produced the website link where I could access the video stream. Testing the ESP-32 CAM with an unfocused telescope produced an image almost identical to what I would see looking through the eye piece with my own eye. With this promising result, I had to wait for the next clear night to test how well it would work when focused on the moon.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Design -->
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Sync.jpg" alt="###">
             </div>
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="Fusion/ESP32_CAM2.jpg" alt="###">
+                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Test.jpg" alt="###">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM" alt="###">
             </div>
         </div>
         <!-- /.row -->
