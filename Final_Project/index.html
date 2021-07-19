@@ -52,7 +52,7 @@
                         <a href="../About_Me/index.html">About Me</a>
                     </li>
                     <li class="active">
-                        <a href="Final_Project/index.html">Final Project</a>
+                        <a href="index.html">Final Project</a>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Weekly Assignments <span class="caret"></span></a>
@@ -182,8 +182,9 @@
                 <h3>Fusion 360 Modeling</h3>
                 <h4>The Gears:</h4>
                 <p>As described above, gears will be the ideal way to adjust the focusing knob using the stepper motor. Therefore, in Fusion 360, I used the spurgear addon to easily create a few generic gears. For the ideal gear ratio, the stepper motor gears are much smaller than the focusing knob counterparts. I also added the D-shaped axle holes for the stepper motor and added thin planes across the face of the focusing knob gears (so they have a large surface area to be glued onto the knobs) which were measured to fit perfectly around the knobs.</p>
-                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Gears.f3d>Gears.f3d</a></p>
-                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Gears.f3d>Telescope Gears.f3d</a></p>
+                <p>Download the mesh STL file here: <a href=Fusion/Telescope_Gears.stl>Telescope Gears.stl</a></p>
+                <p>Download the Prusa 3D printable gcode file here: <a href=Fusion/Telescope_Gears_0.2mm_PLA_MK3S_3h16m.gcode>Telescope Gears.gcode</a></p>
                 <img class="img-responsive img-rounded center" style="max-width: 300px;" src="Fusion/Gears.jpg" alt="###">
             </div>
             <div class="col-sm-4">
@@ -196,8 +197,9 @@
             <div class="col-sm-8">
                 <h4>The Clamp:</h4>
                 <p>To create the clamp I decided to design two half cylinders that could be tightened with bolts to fit tightly around the telescope body. To do so I measured the diameter of the telescope and created a sketch with a circle just barely larger (in order to accont for slight error in the size of the telescope tube). To ensure it was guarunteed to fit tightly and securly, I removed a small portion of at the top and bottom where the bolts would attach. With slight give in the plastic material, this would surely pull the thin cylinder to fit nicely. Now, I just need to add a flat face to secure the stepper motor. I will drill holes on this flat area after it is printed to ensure the stepper motor is placed in the ideal place to allign the gears. Here I also added a flat "roof-like" feature for the metro board to have a place to easily attach to.</p>
-                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Clamp.f3d>Clamp.f3d</a></p>
-                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <p>Download the Fusion 360 gear model here: <a href=Fusion/Telescope_Clamp.f3d>Telescope Clamp.f3d</a></p>
+                <p>Download the mesh STL file here: <a href=Fusion/Telescope_Clamp.stl>Telescope Clamp.stl</a></p>
+                <p>Download the Prusa 3D printable gcode file here: <a href=Fusion/Telescope_Clamp_0.2mm_PLA_MK3S_11h24m.gcode>Telescope Clamp.gcode</a></p>
                 <div class="col-sm-6">
                     <img class="img-responsive img-rounded" src="Fusion/Sketch.jpg" alt="###">
                 </div>
@@ -216,7 +218,8 @@
                 <h4>The ESP32-CAM Holder:</h4>
                 <p>Finally, I needed to create the device that would hold the ESP32-CAM in place over the viewfinder lens. This had to be some sort of detachable feature that would hold the camera lens directly over the viewfinder lens. This design has a slot shaped perfectly for the ESP32-CAM to fit in back with just the camera lens able to fit through. This is centered within a circular piece that will fit over the viewfinder lens. It has notches to fit around the geometry already present on the telescope lens. To attach, bolts can be threaded through the holes in the side of the circular piece and tightened onto the viewfinder lens. These should also allow for microadjustments to ideally position the ESP32-CAM over the viewfinder. This part also had to be measured with very low tolerance. Some of the viewfinder lenses have only an extremely small area in which the bolts can possibly be fixed. This means that the bolt holes had to be placed in the perfect position to be able to grab onto the lens without slipping off.</p>
                 <p>Download the Fusion 360 gear model here: <a href=Fusion/ESP32_CAM_Holder.f3d>ESP32-CAM Holder.f3d</a></p>
-                <p>Download the Prusa 3D printable file here: <a href=></a></p>
+                <p>Download the mesh STL file here: <a href=Fusion/ESP32-CAM_Holder.stl>ESP32-CAM Holder.stl</a></p>
+                <p>Download the Prusa 3D printable gcode file here: <a href=Fusion/ESP32-CAM_Holder_0.2mm_PLA_MK3S_1h49m.gcode>ESP32-CAM Holder.gcode</a></p>
                 <div class="col-sm-6">
                     <img class="img-responsive img-rounded" src="Fusion/Sketch_ESP32.jpg" alt="###">
                 </div>
@@ -230,15 +233,54 @@
         </div>
         <!-- /.row -->
 
+        <!-- Heading: 3D Print -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">3D Printing (July 20<sup>th</sup>, 2021):</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: 3D Print -->
         <div class="row">
             <div class="col-sm-12">
-                <h4>The ESP32-CAM</h4>
+                <p>In order to 3D print my parts, I saved the fusion files as .stl mesh files and uploaded them to Prusa. From here I was able to slice each part individually using 0.2mm quality generic PLA filament. The individual .stl and .gcode files can be downloaded above. The gears and the ESP32-CAM Holder each had reasonable print times, however the telescope clamp was a very large print. It would take nearly 11.5 hours to print the telescope clamp. Therefore, to simplify the printed process, I combined all 3 parts into one print file. This was, the 3D printer could be run overnight once and produce all 3 pieces. Thanks to Nathan, Victoria and the Harvard 3D printers for helping make my parts a reality.</p>
+                <p>Download the Prusa 3D printable gcode for all the parts combined here: <a href=3D_Print/Final_Proj_Print.gcode>3 Parts.gcode</a></p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: 3D Print  -->
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="3D_Print/STL_Mesh.jpg" alt="###">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="3D_Print/Prusa_Print.jpg" alt="###">
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="3D_Print/Print_Time.jpg" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: ESP32-CAM -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">The ESP32-CAM Testing (July 20<sup>th</sup>, 2021):</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: ESP32-CAM -->
+        <div class="row">
+            <div class="col-sm-12">
                 <p>Now it was time to experiment with the ESP32-CAM to make sure it would work well with my telescope. I followed the steps to upload the correct code on the <a href=https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/> AI Thinker ESP32-CAM</a>. I had to wire it to the USB attached FTDI programmer and when uploading code, I had to connect the GPIO 0 pin to the ground pin as well. Then, removing the GPIO-0 to ground connection and opening the 115200 baud serial monitor, hitting the reset button on the ESP32-CAM produced the website link where I could access the video stream. Testing the ESP-32 CAM with an unfocused telescope produced an image almost identical to what I would see looking through the eye piece with my own eye. With this promising result, I had to wait for the next clear night to test how well it would work when focused on the moon.</p>
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Heading: Design -->
+        <!-- Heading: ESP32-CAM  -->
         <div class="row">
             <div class="col-sm-4">
                 <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Sync.jpg" alt="###">
