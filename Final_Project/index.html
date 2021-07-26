@@ -274,22 +274,68 @@
 
         <!-- Heading: ESP32-CAM -->
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <p>Now it was time to experiment with the ESP32-CAM to make sure it would work well with my telescope. I followed the steps to upload the correct code on the <a href=https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/> AI Thinker ESP32-CAM</a>. I had to wire it to the USB attached FTDI programmer and when uploading code, I had to connect the GPIO 0 pin to the ground pin as well. Then, removing the GPIO-0 to ground connection and opening the 115200 baud serial monitor, hitting the reset button on the ESP32-CAM produced the website link where I could access the video stream. Testing the ESP-32 CAM with an unfocused telescope produced an image almost identical to what I would see looking through the eye piece with my own eye. With this promising result, I had to wait for the next clear night to test how well it would work when focused on the moon.</p>
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Sync.jpg" alt="###">
+            </div>
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Test.jpg" alt="###">
             </div>
         </div>
         <!-- /.row -->
 
-        <!-- Heading: ESP32-CAM  -->
+        <!-- Heading: ESP32-CAM -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">The ESP32-CAM (July 27<sup>th</sup>, 2021):</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: ESP32-CAM -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-8">
+                <p>The first step for attaching my ESP32-CAM to the telescope was to make sure I could connect to my CAM while it was not attached directly to my computer. I completely this testing over the class 9 assignment, and a more detailed documentation of this process can be found there. However, to put it simply, I powered the metro with a battery pack and connected the ESP32-CAM to ground, power, TX and RX pins. This gave me an image the would read on my computer while my CAM was within the range of the WiFi.</p>
+                <p>Next, I inserted my camera into the newly 3D printed CAM-Holder piece and attached it to the telescope viewfinder. This worked extrmely well, and I was immediately able to see blurry leaves and trees on my computer, taken directly from the ESP32-CAM. As I moved the telescope around and watched the image on the computer, I remembered that the telescope inverts the image as seen naturally. In other words, when the telescope moves up, the image looks like it is panning downwards. Similarly if moved left, the image appears to move right. This backwards thinking is often hard to grasp and remember when following, or locating something in the sky. Therefore, it is very beneficial that the ESP32-CAM interface allows you to flip invert the camera's output. Finally, at night, I was able to focus the ESP32-CAM equipped telescope on the moon!</p>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Camera.jpg" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Lens  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Piece1.jpg" alt="###">
+                <figcaption>Inserted bolts into the holes in order to clamp onto the telescope lens.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Piece2.jpg" alt="###">
+                <figcaption>Tightened bolts hold the lens nicely.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Piece3.jpg" alt="###">
+                <figcaption>The telescope lens is centered over the hole for the ESP32-CAM lens.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Moon  -->
         <div class="row">
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Sync.jpg" alt="###">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Telescope_CAM.jpg" alt="###">
+                <figcaption>With the ESP32-CAM inserted into the CAM-Holder, the entire device can be placed on the telescope.</figcaption>
             </div>
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM_Test.jpg" alt="###">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Flip_Image.jpg" alt="###">
+                <figcaption>Because the telescope inverts its image, we can turn on H-Mirror and V-Flip to restore the image to its actual orientation.</figcaption>
             </div>
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="ESP32/ESP32_CAM" alt="###">
+                <img class="img-responsive img-rounded" src="Cam_Holder/Moon_Sighting.jpg" alt="###">
+                <figcaption>The first images of the moon as seen through my ESP32-CAM (a truly historic moment).</figcaption>
             </div>
         </div>
         <!-- /.row -->

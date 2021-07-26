@@ -81,7 +81,7 @@
     <div class="jumbotron feature">
         <div class="container">
             <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 10: Machine Building</h1>
-            <p>description</p>
+            <p>Control a machine from your computer using at least one stepper motor.</p>
         </div>
     </div>
 
@@ -90,12 +90,29 @@
 
         <!-- Heading:  -->
         <div class="row" style="margin-bottom: 30px;">
-            <div class="col-md-7">
-                <h1 class="page-header">Title</h1>
-                <p>paragraph</p>
+            <div class="col-md-12">
+                <h1 class="page-header">Wiring the Stepper</h1>
+                <p>Before beginning anything, I had to wire the stepper motor. To do so, I followed the wiring schematic found on the class website (which is also copied below). The DRV8834 stepper driver and the ESP32 Huzzah are powered with 9V. The Huzzah is also connected to the computer through the USB port. Finally, the Huzzah, stepper and a capacitor are all connected to the driver.</p>
             </div>
-            <div class="col-sm-5">
-                <img class="img-responsive img-rounded" src="###.jpg" alt="#">
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="Stepper.jpg" alt="#">
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="Stepper_Wiring.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-12">
+                <h1 class="page-header">Stepper Motor Machine</h1>
+                <p>To get comfortable using the stepper motor, I first wanted to complete the example project we were going over in class. I had to complete the current limiting procdure right away as my motor quickly grew very hot. Next, I began to assemble the machine. However, the bearings did not fit around the bolts nicely. It took a little while to figure out, but pushing out the middle piece and slowly threading that plastic part onto the screw worked fairly well. This was completed with the allen wrench and pliers, and then the rest of the bearing was pressed back on. Running the <a href="Stepper_Motor_Huzzah_Trial/Stepper_Motor_Huzzah_Trial.ino"> random stepper code</a>, I was able to get good linear motion out of the machine. It was random and could be refined, however, I wanted to spend most of my time this week on another project.</p>
             </div>
         </div>
         <!-- /.row -->
@@ -103,67 +120,188 @@
         <!-- Heading:  Magnet-->
         <div class="row" style="margin-bottom: 30px;">
             <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+                <img class="img-responsive img-rounded" src="Adjust_Screw.jpg" alt="#">
+                <figcaption>First, I limited the current using the built-in potentiometer on the motor-driver.</figcaption>
             </div>
             <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+                <img class="img-responsive img-rounded" src="Multimeter.jpg" alt="#">
+                <figcaption>The potentiometer had to be tuned to a voltage difference of about 500 in order to limit the current correctly for our stepper motors.</figcaption>
             </div>
             <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+                <img class="img-responsive img-rounded" src="Machine_Parts.jpg" alt="#">
+                <figcaption>To build the machine, I punched out all the laser cut wooden pieces.</figcaption>
             </div>
             <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+                <img class="img-responsive img-rounded" src="Machine2.jpg" alt="#">
+                <figcaption>Finally I assembled the machine following the class website's instuction.</figcaption>
             </div>
         </div>
         <!-- /.row -->
 
-        !-- Heading:  -->
+        <!-- Heading:  -->
         <div class="row" style="margin-bottom: 30px;">
-            <div class="col-md-8">
-                <h1 class="page-header">Title</h1>
-                <h3>P1</h3>
-                <p>paragraph</p>
+            <div class="col-md-7">
+                <h1 class="page-header">The Project</h1>
+                <p>An integral component of my final project alligns very nicely with this assignment. For part of my final project, I want to remotely control a stepper motor in order to turn a focusing knob on a telescope. Therefore, for this week's project, I worked exclusively on trying to create a mechanism that would accomplish this feat.</p>
+                <p>Previously, I had designed gears and a clamp to wrap around my telescope to be 3D printed for my final project. The gears were designed to fit on the focusing knob of the telescope and around the stepper motor shaft. They were also designed in an ideal size ratio to maximize the torque of the stepper. This ensured it would be able to turn the device. The telescope clamp consists of two half cylinyders that fit snuggly around the telescope. These can then be tightened together using bolts. These arrived this past weekend, just in time for starting to work on this design.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Idea.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Magnet-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Printed_Gears.jpg" alt="#">
+                <figcaption>The 3D printed gears</figcaption>
+            </div>
+            <div class="col-sm-6">
+                <iframe src="https://college233.autodesk360.com/shares/public/SH56a43QTfd62c1cd968c88fd06186b2d1e1?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+                <figcaption>The telescope clamp design.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  Magnet-->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Focus_Gear.jpg" alt="#">
+                <figcaption>The gear for the focusing knob fit perfectly and tightly.</figcaption>
             </div>
             <div class="col-sm-4">
-                <!--Carosousel-->
-                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
-                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
-                    </ol>
+                <img class="img-responsive img-rounded" src="Stepper_Gear.jpg" alt="#">
+                <figcaption>The gear for the stepper was almost too small, but was able to be pressed onto the stepper with some force.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Telescope_Support.jpg" alt="#">
+                <figcaption>The telescope clamp fit nicely around the telescope and will eventually be fastened on using bolts. For now, zip-ties temporarily are holding the sides on place.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
 
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="#.jpg" alt="###">
-                        </div>
 
-                        <div class="item">
-                            <img src="#.jpg" alt="###">
-                        </div>
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-7">
+                <h1 class="page-header">Working Towards Remote Control</h1>
+                <p>Eventually, the stepper motor will be bolted onto the telescope clamp, however, I need to buy the correct bolts first. For now, it was temporarily fasted to the device using masking tape. Before making my device controllable from online, I experimented with a simple code I could try to start with. I created a code that rotated the stepper a full rotation every time the code was run (or the reset button was pressed). I assumed I could translate the code to an online database, using one button to rotate the gear to the left and another to rotate it to the right, each in small incriments.</p>
+                <p>I went through the tutorial to set up a firease site, and ultimately, I was able to control the motor from the firebase database, however I ran into some interesting problems that I could not find a solution for:</p>
+                <p>I ran many different code iterations through the firebase site and they did not seem to work as intended. I tried using the fireint technique, and fireString technique. I started out with a fairly complicated code definning both "OFF", "CW Rotation" and "CCW Rotaion", however, I quickly had to scale back to a more simple example as it was not working at all.</p>
+                <p>I ended up writing the same code from just the reset button that would turn the device 360 degrees, just once when it was switched into the "ON" position.</p>
+                <p>Strangely, the code outputs for both processes were extremely different. As seen below, the code controlled online was extremely slow and delayed while the more basic code ran extremely smoothly. I tried to problem solve this issue for a long time and could not reach a solution. I'd be happy for any suggestions! However, because I had gotten stuck with this part of the project and I at least had a stepper motor device that could be controlled from online (although non-ideally), I moved onto a different part of my final project. See my final project page for my continued work!</p>
 
-                        <div class="item">
-                            <img src="#.jpg" alt="###">
-                        </div>
-                    </div>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Stepper_Attach.jpg" alt="#">
 
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <!--/Carosousel-->
+                <img class="img-responsive img-rounded" src="Firebase_Control.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+<!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-12">
+                <h1 class="page-header">Code Issues</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/AgTUQ4eLQg8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <code><pre>#include <WiFi.h>                                 // esp32 library
+#include <FirebaseESP32.h>                        // firebase library
+#include <AccelStepper.h>                         //stepper library
+
+#define FIREBASE_HOST "https://telescope-stepper-default-rtdb.firebaseio.com/"      // the project name address from firebase id
+#define FIREBASE_AUTH "mysecretkey"                    // the secret key generated from firebase
+#define WIFI_SSID "mywifi"                                                     // input your home or public wifi name
+#define WIFI_PASSWORD "mywifipassword"
+
+String fireString = "";                       // Stepper Status Input
+
+const int stepPin = 13;                       //pin 13 is step pin
+const int dirPin = 12;                        //pin 12 is direction pin
+
+FirebaseData firebaseData;                    //define FirebaseESP32 data object
+
+AccelStepper stepper(1, stepPin, dirPin);     //define stepper
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);       //try to connect with wifi
+
+  Serial.print("Connecting to ");
+  Serial.print(WIFI_SSID);
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.print("Connected to ");
+  Serial.println(WIFI_SSID);
+  Serial.print("IP Address is : ");
+  Serial.println(WiFi.localIP());                                // print local IP address
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);                  // connect to firebase
+  Firebase.reconnectWiFi(true);
+  Firebase.set(firebaseData, "/Stepper_Motor", "OFF");           // set initial string of "OFF"
+
+}
+
+void loop() {
+
+  Firebase.get(firebaseData, "/Stepper_Motor");                     // get led status input from firebase
+  fireString = firebaseData.stringData();                         // change to e.g. intData() or boolData()
+  Serial.println(fireString);
+
+  if (stepper.distanceToGo() == 0 && fireString == "ON")
+  {
+    delay(1000);
+    stepper.moveTo(360);
+    stepper.setMaxSpeed(1000);
+    stepper.setAcceleration(500);
+  }
+  stepper.run();
+}</pre></code>
+            </div>
+            <div class="col-sm-6">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/d-BrTxGV-dU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <code><pre>#include <AccelStepper.h>                         //stepper library
+
+//int button1 = 27;
+//int button2 = 33;
+const int stepPin = 13;                       //pin 13 is step pin
+const int dirPin = 12;                        //pin 12 is direction pin
+
+AccelStepper stepper(1, stepPin, dirPin);     //define stepper
+
+void setup() {
+  //pinMode(button1, INPUT_PULLUP);
+  //pinMode(button2, INPUT_PULLUP);
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+}
+
+void loop() {
+    if (stepper.distanceToGo() == 0)
+    {
+      delay(1000);
+      stepper.moveTo(360);
+      stepper.setMaxSpeed(1000);
+      stepper.setAcceleration(500);
+    }
+    stepper.run();
+
+    
+  }</pre></code>
             </div>
         </div>
         <!-- /.row -->
