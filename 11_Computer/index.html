@@ -81,7 +81,7 @@
     <div class="jumbotron feature">
         <div class="container">
             <h1><span class="glyphicon glyphicon-equalizer"></span>Assignment 11: Computer Programming</h1>
-            <p>description</p>
+            <p>Send data to a computer and display results with code you've written and find a pattern to caste.</p>
         </div>
     </div>
 
@@ -91,11 +91,13 @@
         <!-- Heading:  -->
         <div class="row" style="margin-bottom: 30px;">
             <div class="col-md-7">
-                <h1 class="page-header">Title</h1>
+                <h1 class="page-header">Drawing With Potentiometers</h1>
+                <p>I completed the taking to your browser over USB tutorial that we began in class. I made a very simple circuit connecting the potentiometer to analog pins A0, A2, and A4. I created a new index.html file for the drawing application and then I created the sketch.js and script.js files by copying the code from the tutorial. Unfortunately, I had trouble from here. I was able to get the website to open and even connect my Metro board using the connect button, however, I had no interactive image to show the drawing. It turns out you cannot just copy the index.html file from the tutorial on the website. This is given an html class called "no-js". After inspecting the source of the demo website, I realized that by removing this class, the interactive image would be revealed. Now by moving the potentiometer, the line will travel in the z-direction on the axis. The mouse controls x and y directions.</p>
+                <p>To try for yourself, connect your metroboard on the link below. </p>
                 <p><a class="btn btn-default" href="Draw/index.html">Draw</a></p>
             </div>
             <div class="col-sm-5">
-                <img class="img-responsive img-rounded" src="###.jpg" alt="#">
+                <img class="img-responsive img-rounded" src="Draw1.jpg" alt="#">
             </div>
         </div>
         <!-- /.row -->
@@ -115,73 +117,98 @@
         </div>
         <!-- /.row -->
 
-        <!-- Heading:  Magnet-->
+        <!-- Heading:  -->
         <div class="row" style="margin-bottom: 30px;">
-            <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+            <div class="col-md-4">
+                <h1 class="page-header">Final Project Update</h1>
+                <p>For most of my time in this class cycle, I tried adjusting the code for my final project stepper motor control. I was able to make progress by abandoning the AccelStepper library and focusing primarily on just the Stepper library code. Using this with firebase, I was able to get much smoother and consistant motion. However, I'm not sure firebase will be the best avenue for this process. Unforuntaly there is a very long, and seemingly random lag time for the stepper to connect and obey the firebase commands. I will potentially look into Arduino IoT for this process. It seems that Faraz had some success with this and his chop bot. It is possible this will be a better solution for my process.</p>
             </div>
-            <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
-            </div>
-            <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
-            </div>
-            <div class="col-sm-3">
-                <img class="img-responsive img-rounded" src="#.jpg" alt="#">
-                <figcaption>caption</figcaption>
+            <div class="col-sm-8">
+                <code><pre>
+
+#include <WiFi.h>                                 // esp32 library
+#include <FirebaseESP32.h>                        // firebase library
+#include <AccelStepper.h>
+#include <Stepper.h>
+
+#define FIREBASE_HOST "https://telescope-stepper-default-rtdb.firebaseio.com/"            // the project name address from firebase id
+#define FIREBASE_AUTH "###"  // the secret key generated from firebase
+#define WIFI_SSID "###"                                // input your home or public wifi name
+#define WIFI_PASSWORD "###"
+
+const int stepPin = 13;
+const int dirPin = 12;
+const int pwmA = 3;
+const int pwmB = 11;
+Stepper stepper(200, stepPin, dirPin); // define stepper
+
+//Define FirebaseESP32 data object
+FirebaseData firebaseData;
+
+String fireString = "";                                          // led status received from firebase
+
+void setup() {
+  Serial.begin(115200);
+  delay(1000);
+  pinMode(stepPin, OUTPUT);
+  pinMode(dirPin, OUTPUT);
+  WiFi.begin(WIFI_SSID, WIFI_PASSWORD);                          // try to connect with wifi
+
+  Serial.print("Connecting to ");
+  Serial.print(WIFI_SSID);
+  while (WiFi.status() != WL_CONNECTED) {
+    Serial.print(".");
+    delay(500);
+  }
+
+  Serial.println();
+  Serial.print("Connected to ");
+  Serial.println(WIFI_SSID);
+  Serial.print("IP Address is : ");
+  Serial.println(WiFi.localIP());                                // print local IP address
+  Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);                  // connect to firebase
+  Firebase.reconnectWiFi(true);
+  Firebase.set(firebaseData, "/Stepper_Motor", "OFF");              // set initial string of "OFF"
+
+  pinMode(pwmA, OUTPUT);
+  pinMode(pwmB, OUTPUT);
+
+  digitalWrite(pwmA, HIGH);
+  digitalWrite(pwmB, HIGH);
+
+  stepper.setSpeed(200);
+}
+
+void loop() {
+
+  Firebase.get(firebaseData, "/Stepper_Motor");                     // get led status input from firebase
+  fireString = firebaseData.stringData();                         // change to e.g. intData() or boolData()
+  Serial.println(fireString);
+  if (fireString == "OUT")         ///Positive number = Focus Out
+  {
+    stepper.step(895);
+  }
+  else if (fireString == "IN")         ///Positive number = Focus Out
+  {
+    stepper.step(-895);
+  }
+  
+}
+</pre></code>
             </div>
         </div>
         <!-- /.row -->
 
-        !-- Heading:  -->
+         <!-- Heading:  -->
         <div class="row" style="margin-bottom: 30px;">
             <div class="col-md-8">
-                <h1 class="page-header">Title</h1>
-                <h3>P1</h3>
-                <p>paragraph</p>
+                <h1 class="page-header">Casting Plan</h1>
+                <p>For my casting, I found two scallop shells on the beach and glued them together with hot glue to create a solid figure. This shell has an interesting pattern and should look cool after it is cast.</p>
             </div>
-            <div class="col-sm-4">
-                <!--Carosousel-->
-                <div id="myCarousel_1" class="carousel slide" data-ride="carousel"  style="margin-top: 50px;">
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                        <li data-target="#myCarousel_1" data-slide-to="0" class="active"></li>
-                        <li data-target="#myCarousel_1" data-slide-to="1"></li>
-                        <li data-target="#myCarousel_1" data-slide-to="2"></li>
-                    </ol>
-
-                    <!-- Wrapper for slides -->
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <img src="#.jpg" alt="###">
-                        </div>
-
-                        <div class="item">
-                            <img src="#.jpg" alt="###">
-                        </div>
-
-                        <div class="item">
-                            <img src="#.jpg" alt="###">
-                        </div>
-                    </div>
-
-                    <!-- Left and right controls -->
-                    <a class="left carousel-control" href="#myCarousel_1" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="right carousel-control" href="#myCarousel_1" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-                <!--/Carosousel-->
+            <div class="col-md-4">
+                <img class="img-responsive img-rounded" src="scallop.jpg" alt="#">
             </div>
         </div>
-        <!-- /.row -->
 
     </div>
     <!-- /.container -->
