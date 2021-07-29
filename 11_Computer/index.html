@@ -100,6 +100,21 @@
         </div>
         <!-- /.row -->
 
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-7">
+                <h1 class="page-header">Saving Photos from the ESP32-CAM</h1>
+                <p>Becasue my final project involves using my ESP32-CAM to watch a live stream video of the night sky, I thought it would be cool to also have the option to take a photo of what I was seeing, and save it to my device. I first attempted the saving photos to firebase example from the website, but ran into trouble with my code not even being able to upload. I was getting a "base 64" error, and it appeared maybe I did not have the correct libraries downloaded. Not wanted to waste too much time on this on the short class cycle, I attempted this through another method. I found a randomnerd tutorial for <a href="https://randomnerdtutorials.com/esp32-cam-take-photo-display-web-server/">A Single Photo ESP32-CAM</a>. This tutorial walked me through creating a local server website that would take individual photos with the ESP32-CAM, rather than one continuous livestream. In fact, with a few downloads, this was fairly simple. Also, using html code directly in arduino, it was easy to customize what my local server website looked like. I may even spend more time making this look nicer in the future. With the tutorial, I made three buttons that are displayed on the local server website. One button, called "Capture Photo" takes a picture with the ESP32-CAM that can be displayed on the site. Hitting "Refresh" will load the most recent photo taken and display it on the site. Finally, using the "Rotate" button, you can change the orientation of the most recent photo taken. By right clicking on the image, it can be saved to your device. However, I wanted to be able to see the live stream and take a photo in one single interface. It is important for my project that the livestream is available in order to be able to easily focus the telescope. This turned out to be a little more challenging than I expected. I had assumed that I could simply combine my two separate codes to result in one local host that would show both the livestream and the most recent picture taken at the same time. However, this did not seem possible. I am going to look a little more into editing the "get image" button from the livestream arduino code. This also takes a picture, but it interupts the livestream to do so. Therefore, I am going to see if I can create a side-by-sideversion in the near future.</p>
+                <p>Here is the code for the ESP32-CAM Single Photo Capture: <a href="ESP32-CAM_Web_Camera/ESP32-CAM_Web_Camera.ino">ESP32-CAM_Web_Camera</a>.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="ESP32-CAM_Pic.jpg" alt="#">
+                <img class="img-responsive img-rounded" src="ESP32-CAM_Pic2.jpg" alt="#">
+                <img class="img-responsive img-rounded" src="ESP32-CAM_Pic3.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
         <!-- Heading:  Magnet-->
         <div class="row" style="margin-bottom: 30px;">
             <div class="col-sm-3">
