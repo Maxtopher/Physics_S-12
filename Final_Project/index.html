@@ -298,7 +298,7 @@
         <div class="row" style="margin-bottom: 30px;">
             <div class="col-sm-8">
                 <p>The first step for attaching my ESP32-CAM to the telescope was to make sure I could connect to my CAM while it was not attached directly to my computer. I completely this testing over the class 9 assignment, and a more detailed documentation of this process can be found there. However, to put it simply, I powered the metro with a battery pack and connected the ESP32-CAM to ground, power, TX and RX pins. This gave me an image the would read on my computer while my CAM was within the range of the WiFi.</p>
-                <p>Next, I inserted my camera into the newly 3D printed CAM-Holder piece and attached it to the telescope viewfinder. This worked extrmely well, and I was immediately able to see blurry leaves and trees on my computer, taken directly from the ESP32-CAM. As I moved the telescope around and watched the image on the computer, I remembered that the telescope inverts the image as seen naturally. In other words, when the telescope moves up, the image looks like it is panning downwards. Similarly if moved left, the image appears to move right. This backwards thinking is often hard to grasp and remember when following, or locating something in the sky. Therefore, it is very beneficial that the ESP32-CAM interface allows you to flip invert the camera's output. Finally, at night, I was able to focus the ESP32-CAM equipped telescope on the moon!</p>
+                <p>Next, I inserted my camera into the newly 3D printed CAM-Holder piece and attached it to the telescope viewfinder. This worked extrmely well, and I was immediately able to see blurry leaves and trees on my computer, taken directly from the ESP32-CAM. As I moved the telescope around and watched the image on the computer, I remembered that the telescope inverts the image as seen naturally. In other words, when the telescope moves up, the image looks like it is panning downwards. Similarly if moved left, the image appears to move right. This backwards thinking is often hard to grasp and remember when following, or locating something in the sky. Therefore, it is very beneficial that the ESP32-CAM interface allows you to flip invert the camera's output. Finally, at night, I was able to focus the ESP32-CAM equipped telescope on the moon! Unfortunately, it was very hazy and the moon was behind some trees when I was trying to fous it. Also, the WiFi, did not reliablly reach my back yard where I was trying to get my image of the moon. Therefore, the first lunar photo was little more than a small blurry fraction of the moon. It can only go up from here.</p>
             </div>
             <div class="col-sm-4">
                 <img class="img-responsive img-rounded" src="Cam_Holder/Camera.jpg" alt="###">
@@ -336,6 +336,110 @@
             <div class="col-sm-4">
                 <img class="img-responsive img-rounded" src="Cam_Holder/Moon_Shadow.jpg" alt="###">
                 <figcaption>The first images of the moon as seen through my ESP32-CAM (a truly historic moment).</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Stepper Motor Control (August 1<sup>st</sup>, 2021):</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-7">
+                <h3> Assembling the Stepper</h3>
+                <p>The 3D printed clamp used to attach the stepper to the telescope fit perfectly around the body of the telescope. It fit tightly around the telescope once tightened with bolts at the top and bottom on the clamp pieces. In oder to attach the stepper to the clamp, I needed to drill 4 holes in the base of the clamp and screw the metal stepper holder directly onto the clamp. Once it was screwed on, I could attach the stepper parallel to the telescope and then add the stepper gear piece. With the wiring on top of the clamp, and the gears interlocking, it was ready to start to try and focus the telescope remotely.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Stepper/Stepper_Mechanism.jpg" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Clamp_Screws.jpg" alt="###">
+                <figcaption>Bolts used to tighten the clamp around the telescope.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Clamp_Drill.jpg" alt="###">
+                <figcaption>Drilled holes in the 3D printed clamp piece.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Clamp_Screwed.jpg" alt="###">
+                <figcaption>Stepper motor holster attached to clamp with screws.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3> Arduino IoT Control</h3>
+                <p>I tried a few different processes for the stepper motor control of the focusing knobs. I tried physical ciruit control, simple arduino code and google firebase control. See <a href="../09_Networking/index.html">Assignment 9</a> and <a href="../10_Machine/index.html">Assignment 10</a> for some of these other trials. Finally, I settled on Arduino IoT to control the focusing mechanism on my telescope</p>
+                <p>Arduino IoT is actually very straight forward to unerstand and use. After logging into Arduino Cloud online, and navigating to Arduino IoT, you are brought to a page where you can start a new project. In different windows, you can easily create variables, and link them to buttons, switches or other widgets. The Arduino program then creates a skeleton code for you. All I needed to do was add the control code for the stepper motor and define what certain widgets would do. In the end, I had a code that produced 4 buttons and a slider on the Arduino IoT interface. Two buttons allowed for coarse focusing in and out. The other two buttons were defined for fine focusing. I also added a slider widget to help control how fine the focusing was. Therefore, each press of the fine focusing button could correspond with any turn angle up to about a quarter turn. This would allow for extremely fine focusing that would be impossible with human hands.</p>
+            </div>
+            <div class="col-sm-6">
+                <iframe src=https://create.arduino.cc/editor/maxtopher/3e0b099a-f01e-434d-b659-60e78857f5d6/preview?embed style="height:510px;width:100%;margin:10px 0" frameborder=0></iframe>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Arduino_IoT2.jpg" alt="###">
+                <figcaption>Inputs for Arduino IoT allow for computer-generated code to link variables, network and ESP32 device.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Arduino_IoT3.jpg" alt="###">
+                <figcaption>Creating buttons to be linked to variables.</figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/Arduino_IoT4.jpg" alt="###">
+                <figcaption>The control center for my telescope stepper project.</figcaption>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Stepper Motor and Camera Combined (August 3<sup>rd</sup>, 2021):</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-6">
+                <h3>as</h3>
+                <p></p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
+                <figcaption></figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
+                <figcaption></figcaption>
+            </div>
+            <div class="col-sm-4">
+                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
+                <figcaption></figcaption>
             </div>
         </div>
         <!-- /.row -->
