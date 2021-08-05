@@ -80,13 +80,83 @@
 
     <div class="jumbotron feature">
         <div class="container">
-            <h1><span class="glyphicon glyphicon-equalizer"></span> Final Project</h1>
-            <p></p>
+            <h1><span class="glyphicon glyphicon-equalizer"></span>Final Project: The Digital Telescope</h1>
+            <p>This page contains an overview of my final project, The Digital Telescope, and a detailed documentation of the steps to get there.</p>
         </div>
     </div>
 
     <!-- Content -->
     <div class="container">
+
+        <!-- Heading: Weekly Work (-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">The Digital Telescope:</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Telescope Video (-->
+        <div class="row">
+
+            <div class="col-lg-12 text-center">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/xMM7daKmcI8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Weekly Work (-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Project Summary</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Final Project Summary -->
+        <div class="row">
+            <div class="col-sm-6">
+                <p>As a physics concentrator beginning a new hobby of looking into the night sky, I thought a telescope would be the perfect canvas to create my final project in this class. For this project, I transformed a telescope into a computer controlled device. Over wifi connection, you can see the image as seen through the telescope viewfinder and focus the image in real time. This uses a stepper motor with a gear reduction to adjust the focusing knob and an ESP32-CAM to capture a livestream of the telescope's viewfinder image. To achieve this product, I first designed 3D printable pieces including a clamp that attaches to the telescope and holds the stepper motor, battery pack and other circuitry, gears for the stepper motor and the focusing knob, and an adapter that connects the ESP32-CAM to the telescope lens. Detailed documentation can be found below for the creation of these pieces and the wiring of the stepper motor and ESP32-CAM. These were then attached to the telescope and I uploaded the basic example code for livestream video to the ESP32-CAM. (Instructions for this are <a href="https://randomnerdtutorials.com/esp32-cam-video-streaming-face-recognition-arduino-ide/">here</a>). Finally, Arduino IoT was used to control the focsuing knobs. This code can be found under the heading, "Stepper Motor Control (August 1st, 2021): Arduino IoT Control".</p>
+
+                <p>Unfortunatley, once my project was completely ready for testing, I had only cloudy and rainy nights for testing my digital telescope. The video above features a branch on a tree in my yard. It is certainly not as exciting as the moon, but it works well for the demo. Hopefully, there will be some clear nights soon and I can upload some photos from the completed digital telescope then. (The moon pictured here was taken with an iPhone, not the ESP32-CAM).</p>
+            </div>
+            <div class="col-sm-6">
+                <img class="img-responsive img-rounded" src="Summary/Moon22.jpg" alt="the moon">
+            </div>
+        </div>
+        <!-- /.row -->
+
+                <!-- Heading: Weekly Work (-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Using the Digital Telescope</h3>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Final Project Summary -->
+        <div class="row">
+            <div class="col-sm-3">
+                <img class="img-responsive img-rounded" src="Summary/default_buttons.jpg" alt="buttons for esp32">
+            </div>
+            <div class="col-sm-4">
+                <p>The video interface includes a few useful buttons for optimal control of the telescope. The basic quality, brightness, contrast and saturation sliders are helpful for adjustments on the telescope image, and most other setting can just remain in their default positions. However, H-Mirror and V-Flip are extremely helpful for this project. For those who have used telescopes before, it can often be confusing when trying to track something across the sky. The optics behind the telescope lenses inverts the image that we recieve in the viewfinder, so when moving the telescope right, the image appears to move left. The same inversion occurs when moving vertically. These two image inversions on the livestream correct this optical trick and eliminate all confusion.</p> 
+                <p>Controlling the telescope focusing with Arduino IoT is extremely simple. This telescope only has one focusing knob, but with the precision of the stepper motor, we can turn this into both a fine and coarse focusing knob. In fact, using the slider to adjust focusing depth, the fine focus can be made extremely accurate. While the coarse focus has a fixed focusing depth, small values on the slider will produce very fine focusing while larger numbers will produce coarser focusing.</p>
+            </div>
+            <div class="col-sm-5">
+                <img class="img-responsive img-rounded" src="Summary/Buttons.jpg" alt="buttons for esp32">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Weekly Work (-->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">See Below for Detailed Documentation on Creating My Final Project:</h1>
+            </div>
+        </div>
+        <!-- /.row -->
 
         <!-- Heading: Final Project Proposal (-->
         <div class="row">
@@ -350,8 +420,28 @@
 
         <!-- Heading: Stepper Motor -->
         <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-12">
+                <h3>Wiring the Stepper</h3>
+                <p>To wire the stepper to the Huzzah, I followed the wiring schematic found on the class website (which is also copied below). The DRV8834 stepper driver and the ESP32 Huzzah are powered with 9V. The Huzzah is also connected to the computer through the USB port. Finally, the Huzzah, stepper and a capacitor are all connected to the driver. I had to limit the current through the stepper, as it was getting extrememly hot very quickly. You can see <a href="../10_Machine/index.html">Assignment 10</a> for a more detailed descriptipon of how this was done. Ultimately, the Huzzah was able to easily control the stepper motor with the following setiup.</p>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading:  -->
+        <div class="row" style="margin-bottom: 30px;">
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="Stepper/Stepper.jpg" alt="#">
+            </div>
+            <div class="col-md-6">
+                <img class="img-responsive img-rounded" src="Stepper/Stepper_Wiring.jpg" alt="#">
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Heading: Stepper Motor -->
+        <div class="row" style="margin-bottom: 30px;">
             <div class="col-sm-7">
-                <h3> Assembling the Stepper</h3>
+                <h3>Assembling the Stepper</h3>
                 <p>The 3D printed clamp used to attach the stepper to the telescope fit perfectly around the body of the telescope. It fit tightly around the telescope once tightened with bolts at the top and bottom on the clamp pieces. In oder to attach the stepper to the clamp, I needed to drill 4 holes in the base of the clamp and screw the metal stepper holder directly onto the clamp. Once it was screwed on, I could attach the stepper parallel to the telescope and then add the stepper gear piece. With the wiring on top of the clamp, and the gears interlocking, it was ready to start to try and focus the telescope remotely.</p>
             </div>
             <div class="col-sm-5">
@@ -417,29 +507,14 @@
 
         <!-- Heading: Stepper Motor -->
         <div class="row" style="margin-bottom: 30px;">
-            <div class="col-sm-6">
-                <h3>as</h3>
-                <p></p>
-            </div>
-            <div class="col-sm-6">
-                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
-            </div>
-        </div>
-        <!-- /.row -->
-
-        <!-- Heading: Stepper Motor  -->
-        <div class="row" style="margin-bottom: 30px;">
-            <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
-                <figcaption></figcaption>
+            <div class="col-sm-8">
+                <h3></h3>
+                <p>Finally, I transitioned the ESP32-CAM wiring from the metro board to the Huzzah that was already wired to the stepper. After programming the code onto the ESP32-CAM, I simply had to connect the power, ground, RX, and TX pins of the camera to their corresponding pins on the Huzzah. This was sufficient to transmit the video to the computer.</p>
+                <p>In the end, I decided to use two open windows in split screen to control my focusing and real time video feed. I attempted to find the html code for the video stream demo arduino code, however, it was not an easy interface to control. The html code was buried and hidden even in the inspect sources view of the page. Eventually, with the help of Nathan, I found a <a href="https://github.com/fustyles/Arduino/blob/master/ESP32-CAM_FaceRecognition_SD_EnrollFace_PAGE/ESP32-CAM_FaceRecognition_SD_EnrollFace_PAGE.ino">webpage</a> that had some of the html source code for the demo. However, it was configured for face recognition and despite spending a lot of time trying to modify the arduino code, I was not able to seemlessly connect the focusing buttons, video stream and the correct button features (like H-Mirror and V-Flip). Therefore, my final project will require two open windows in split screen for optimal control.</p>
             </div>
             <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
-                <figcaption></figcaption>
-            </div>
-            <div class="col-sm-4">
-                <img class="img-responsive img-rounded" src="Stepper/.jpg" alt="###">
-                <figcaption></figcaption>
+                <img class="img-responsive img-rounded" src="Stepper/final_wiring.jpg" alt="###">
+                <figcaption>The final wiring of the stepper and ESP32-CAM.</figcaption>
             </div>
         </div>
         <!-- /.row -->
